@@ -7,8 +7,73 @@
     <title>index-page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    .nav-item :nth-child(1){
+        margin-left: 40px;
+    }
+    .main{
+        background-color: rgb(241, 245, 249);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+
+    }
+    .left{
+        width: 50%;
+        height: 100vh;
+        margin-top: 7%;
+        
+    }
+    .left span{
+        color:goldenrod;
+    }
+    .left h1{
+padding: 2%;
+font-size: 80px;
+    }
+    .left h5{
+        padding: 2%;
+        
+    }
+    .left p{
+        padding: 3%;
+    }
+   .left a{
+       color: goldenrod;
+       padding-left: 4%;
+   }
+   .left a:hover{
+       color: black;
+   }
+    .right{
+        padding: 2%;
+        height: 100%;
+        width: 50%;
+        background-color: lightgray;
+        transform: rotate(-20deg);
+        /* position: relative; */
+
+    }
+    .right > img {
+        width: 100%;
+        height: 100%;
+         /* position: absolute; */
+        transform: rotate(20deg); 
+    }
+    .showing h1{
+font-size: 80px;
+position: relative;
+    }
+    .img-fluid{
+        box-shadow: 5px 10px 20px black;
+    }
+</style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light  sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">𝗔𝗿𝘁 𝗚𝗮𝗹𝗹𝗲𝗿𝘆</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,5 +106,48 @@
           </div>
         </div>
       </nav>
+      <div class="main">
+<div class="left">
+    <span>ROYAL GALLERIE'S OF ARTS</span>
+    <h1>É𝐝𝐨𝐮𝐚𝐫𝐝<br> 𝐌𝐚𝐧𝐞𝐭</h1>
+    <h5>𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝟮𝟬𝟭𝟳: 𝗔𝗡 𝗘𝗫𝗖𝗜𝗧𝗜𝗡𝗚 𝗦𝗘𝗔𝗦𝗢𝗡<br> 𝗢𝗙 𝗔𝗥𝗧 𝗧𝗛𝗔𝗧 𝗥𝗘𝗩𝗢𝗟𝗧𝗦 𝗔𝗚𝗔𝗜𝗡𝗦𝗧.</h5>
+    <p>n 2017 we continue Royal Gallery’s 60-year legacy of mapping <br>
+    the dramatic changes of our world. From our mainstage, we create a space for <br>
+    interrogation, conversation and debate. We invent and reflect the world  <br>
+    that surrounds us. This year we rebel against.</p>
+    <a href="#" class="a"> SPECIAL EVENT ◕</a>
+    <a href="#" class="a">VIEW ALL EVENT◕ </a>
+</div>
+<div class="right">
+    <img src="pic2.jpg" class="img-fluid" alt="">
+</div>
+</div>
+<center>
+<div class="showing">
+    <p>CURRENT EXHIBITIONS</p>
+     <h1>Now Showing</h1>
+     <h1>|</h1>
+</div>
+</center>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+           <img src="pic3.jpg" class="img-fluid" alt=""> <br> </br> </br>
+           <h4>English Landscape Painting</h4>
+        </div>
+        <div class="col-md-3">
+            <img src="pic4.jpg" class="img-fluid" alt="">  <br> </br> </br>
+            <h4>Les Fleurs Du Mal - The French Masters</h4>
+        </div>
+        <div class="col-md-3">
+            <img src="pic5.jpg" class="img-fluid" alt=""> <br> </br> </br>
+            <h4>Nineteenth-Century Pastel Portraits</h4>
+        </div>
+        <div class="col-md-3">
+            <img src="pic6.jpg" class="img-fluid" alt=""> </br> </br> </br>
+            <h4>Flemish Primitives - Netherlandish Painters</h4>
+        </div>
+    </div>
+</div>
 </body>
 </html>
