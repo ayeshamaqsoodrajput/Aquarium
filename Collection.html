@@ -19,9 +19,9 @@
     }
 
     .collection {
-        background-color: rgb(228, 227, 227);
+        background-color: rgb(229, 227, 227);
         width: 100%;
-        height: 300vh;
+        height: 380vh;
     }
 
     .text {
@@ -32,82 +32,137 @@
     .text h1 {
         font-size: 100px;
     }
-</style>
+    .text p{
+        color: goldenrod;
+    } 
 
-<body>
-    <div class="collection">
-        <div class="text">
-            <p>EXPLORE OUR</p>
-            <h1>Collection</h1>
-            <h1>|</h1>
-        </div>
-        <!---->
-        <!DOCTYPE html>
-        <html>
+    .mainC {
+        width: 100%;
+        height: 60vh;
+        display: flex;
 
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <style>
-                * {
-                    box-sizing: border-box;
-                }
+    }
 
-                body {
-                    margin: 0;
-                    font-family: Arial, Helvetica, sans-serif;
-                }
+    .leftC {
+        width: 50%;
+        height: 50vh;
+        margin-top: 3%;
+        padding-left: 4%;
 
-                .header {
-                    text-align: center;
-                    padding: 32px;
-                }
+    }
 
-                .row {
-                    /* IE 10 */
-                    display: flex;
-                    /* flex-wrap: wrap; */
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    /* padding: 0 4px; */
-                }
+    .leftC h1 {
+        padding: 2%;
+        font-size: 50px;
+    }
 
-                /* Create two equal columns that sits next to each other */
+    .leftC p {
+        padding: 3%;
+    }
+
+    .rightC {
+        padding: 3%;
+        height: 50%;
+        width: 45%;
+    }
+
+    .rightC>img {
+        width: 40%;
+        height: 30vh;
+    }
+    <!---->
+    .mainU {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+
+    }
+
+    .leftU{
+        width: 50%;
+        height: 50vh;
+        margin-top: 3%;
+        padding-left: 9%;
+
+    }
+    .leftU p {
+        padding-top: 5%;
+    }
+
+    .rightU {
+        padding: 5%;
+        height: 50%;
+        width: 45%;
+    }
+
+    .rightU>img {
+        width: 40%;
+        height: 30vh;
+        padding-top: 5%;
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+
+    .row {
+        /* IE 10 */
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* padding: 0 4px; */
+    }
+
+    /* Create two equal columns that sits next to each other */
 
 
 
-                /* Style the buttons */
-                .btn {
-                    border: none;
-                    outline: none;
-                    padding: 10px 16px;
-                    background-color: #f1f1f1;
-                    cursor: pointer;
-                    font-size: 18px;
-                }
+    /* Style the buttons */
+    .btn {
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 18px;
+    }
 
-                .btn:hover {
-                    background-color: #ddd;
-                }
+    .btn:hover {
+        background-color: #ddd;
+    }
 
-                .btn.active {
-                    background-color: #666;
-                    color: white;
-                }
+    .btn.active {
+        background-color: #666;
+        color: white;
+    }
 
-                .main {
-                    /* height: 50vh; */
-                    width: 100%;
+    .main {
+        /* height: 50vh; */
+        width: 100%;
 
-                }
+    }
 
-                .column {
-                    display: flex;
-                    flex-direction: column;
-                    width: 30%;
-                }
-                 /* footer*/
+    .column {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    /* footer*/
     ul {
         margin: 0px;
         padding: 0px;
@@ -121,6 +176,7 @@
     .footer-cta {
         border-bottom: 1px solid #373636;
     }
+
     .cta-text {
         padding-left: 15px;
         display: inline-block;
@@ -142,12 +198,14 @@
         position: relative;
         z-index: 2;
     }
+
     .footer-text p {
         margin-bottom: 14px;
         font-size: 14px;
         color: #7e7e7e;
         line-height: 28px;
     }
+
     .footer-widget-heading h3 {
         color: #fff;
         font-size: 20px;
@@ -181,7 +239,8 @@
         color: #878787;
         text-transform: capitalize;
     }
-    .footer-logo h1{
+
+    .footer-logo h1 {
         color: goldenrod;
     }
 
@@ -241,9 +300,18 @@
         font-size: 14px;
         color: #878787;
     }
-            </style>
-        </head>
-        <body>
+</style>
+</head>
+
+<body>
+
+    <body>
+        <div class="collection">
+            <div class="text">
+                <p>EXPLORE OUR</p>
+                <h1>Collection</h1>
+                <h1>|</h1>
+            </div>
             <!-- Header -->
             <div class="header" id="myHeader">
                 <button class="btn active" onclick="two()">Dinh Nguyen</button>
@@ -254,26 +322,24 @@
             <div class="main">
                 <div class="row">
                     <div class="column">
-                        <img src="n1.jpg" style="width:100%">
-                        <img src="pic2.jpg" style="width:100%">
-                        <img src="o3.jpg" style="width:100%">
+                        <img src="p2.jpg" style="width:100%">
+                        <img src="conu.jpg" style="width:100%">
                         <img src="n3.jpg" style="width:100%">
-                        <img src="n4.jpg" style="width:100%">
+                        <img src="m1.png" style="width:100%">
                     </div>
 
                     <div class="column">
                         <img src="p1.jpg" style="width:100%">
-                        <img src="p2.jpg" style="width:100%">
-                        <img src="p3.jpg" style="width:100%">
+                        <img src="n1.jpg" style="width:100%">
+                        <img src="o3.jpg" style="width:100%">
                         <img src="o1.jpg" style="width:100%">
-                        <img src="o2.jpg" style="width:100%">
+                        <img src="m4.jpg" style="width:100%">
                     </div>
                     <div class="column">
-                        <img src="m1.png" style="width:100%">
+                        <img src="n4.jpg" style="width:100%">
                         <img src="m2.jpg" style="width:100%">
                         <img src="m3.jpg" style="width:100%">
-                        <img src="m4.jpg" style="width:100%">
-                        <img src="o3.jpg" style="width:100%">
+                        <img src="o2.jpg" style="width:100%">
                     </div>
                 </div>
             </div>
@@ -320,6 +386,49 @@
                     });
                 }
             </script>
+            <div class="mainC">
+                <div class="leftC">
+                    <h1>𝐑𝐞𝐚𝐝 𝐌𝐨𝐫𝐞<br>𝐀𝐛𝐨𝐮𝐭 𝐎𝐮𝐫<br> 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧</h1>
+                    <p>No in he real went find mr. <br>
+                        Wandered or strictly raillery <br>
+                        stanhill as. Jennings appetite <br>
+                        disposed me an at subjects an. To <br>
+                        no indulgence diminution so discovered mr apartments.</p>
+                </div>
+                <div class="rightC">
+                    <img src="us.jpg" class="img-fluid0" alt=""> <br> <br>
+                    <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
+                        consectetur<br>
+                        adipiscing elit.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="mainU">
+                <div class="leftU">
+                    <p>Abilities forfeited situation extremely my to he<br> resembled. Old had conviction discretion
+                        <br> understood put principles you. Match means<br> keeps round one her quick. She forming
+                        two<br> comfort invited. Yet she income effect edward<br>. Entire desire way design few. Mrs
+                        <br>
+                        sentiments led solicitude estimating friendship fat.<br>
+                        Meant those event is weeks state it to or. Boy but has folly
+                    </p>
+                    <p>Received shutters expenses ye he pleasant. Drift<br> as blind above at up. No up simple county
+                        stairs<br>
+                        do should praise as. Drawings sir gay together<br> landlord had law smallest. Formerly
+                        welcomed<br>
+                        attended declared met say unlocked. Jennings<br> outlived no dwelling denoting in peculiar as
+                        he<br>
+                        believed.
+                        Behaviour excellent middleton be as it<br> curiosity departure ourselves.</p>
+                </div>
+                <div class="rightU">
+                    <img src="cu.jpg" class="img-fluid0" alt=""> <br> <br>
+                    <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
+                        consectetur<br>
+                        adipiscing elit.</p>
+                </div>
+            </div>
+            <hr>
             <!--footer-->
             <footer class="footer-section">
                 <div class="container">
@@ -399,6 +508,6 @@
                     </div>
                 </div>
             </footer>
-        </body>
+    </body>
 
-        </html>
+</html>

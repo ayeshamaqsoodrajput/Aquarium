@@ -9,6 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+<script>
+let person = prompt("💮𝗪𝗮𝗹𝗹𝗖𝗼𝗺𝗲 𝘁𝗼  𝗔𝗿𝘁 𝗚𝗮𝗹𝗹𝗲𝗿𝘆💮",);
+
+if (person != null) {
+  document.getElementById("demo").innerHTML =
+  "Hello " + person;
+}
+</script>
 <style>
     * {
         margin: 0%;
@@ -30,7 +38,7 @@
     .left {
         width: 50%;
         height: 100vh;
-        margin-top: 7%;
+        margin-top: 5%;
         padding-left: 4%;
 
     }
@@ -41,7 +49,7 @@
 
     .left h1 {
         padding: 2%;
-        font-size: 80px;
+        font-size: 90px;
     }
 
     .left h5 {
@@ -67,7 +75,7 @@
         height: 100%;
         width: 45%;
         background-color: rgb(234, 232, 232);
-        transform: rotate(-20deg);
+        transform: rotate(-10deg);
         /* position: relative; */
 
     }
@@ -76,13 +84,18 @@
         width: 100%;
         height: 100%;
         /* position: absolute; */
-        transform: rotate(20deg);
+        transform: rotate(10deg);
     }
 
     .showing h1 {
         font-size: 80px;
         position: relative;
     }
+    .showing p{
+        position: relative;
+
+    }
+
 
     .img-fluid0 {
         box-shadow: 5px 15px 20px rgb(129, 129, 129);
