@@ -1,12 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+<script>
+    let item = document.getElementsByClassName('item');
+    // console.log (item);
+    for (let a = 0; item.length > a; a++) {
+        item[a].addEventListener('click', function () {
+            for (let k = 0; item.length > k; k++) {
+                item[k].classList.remove('bg-danger');
+            };
+            item[a].classList.add('bg-danger');
+            let getitem = item[a].getAttribute('data-item');
+            console.log(getitem);
+        });
+    };
+</script>
+<!--style-->
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .collection {
+        background-color: lightgrey;
+        width: 100%;
+        height: 300vh;
+    }
+
+    .text {
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .text h1 {
+        font-size: 100px;
+    }
+
+    /* Center website */
+    .row {
+        margin: 0px -0px;
+    }
+
+    /* Add padding BETWEEN each column (if you want) */
+    .row,
+    .row>.column {
+        padding: 0px;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 33.33%;
+        display: none;
+        /* Hide columns by default */
+    }
+
+    /* Clear floats after rows */
+    .row:after {
+        content: "";
+        clear: both;
+    }
+    .show {
+        display: block;
+    }
+
+    /* Style the buttons */
+    .btn {
+        border: none;
+        outline: none;
+        background-color:  lightgrey;
+        cursor: pointer;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .btn:hover {
+        background-color: rgb(183, 182, 182);
+    }
+
+    /* Add a dark background color to the active button */
+    .btn.active {
+        background-color:  rgb(224, 224, 224);
+        color: black;
+    }
+</style>
+
 <body>
-    
+    <div class="collection">
+        <div class="text">
+            <p>EXPLORE OUR</p>
+            <h1>Collection</h1>
+            <h1>|</h1>
+        </div>
+        <!---->
+        <center>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> All</button>
+                <button class="btn" onclick="filterSelection('nature')">Dinh Nguyen</button>
+                <button class="btn" onclick="filterSelection('light')"> Madison Fox</button>
+                <button class="btn" onclick="filterSelection('Green')"> Maria Zvonareva</button>
+                <button class="btn" onclick="filterSelection('no')"> Melinda Stoker</button>
+            </div>
+            <!-- Portfolio Gallery Grid -->
+            <br> <br>
+            <center>
+                <div class="row">
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="n1.jpg" width="80%" hight="50%">
+                        </div>
+                    </div>
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="n2.jpg" width="50%" hight="80vh">
+                        </div>
+                    </div>
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="n3.jpg" width="60%" hight="55vh">
+                        </div>
+                    </div>
+                    <div class="column nature">
+                        <div class="content">
+                            <img src="n4.jpg" width="60%" hight="60vh">
+                        </div>
+                    </div>
+                    <div class="column light">
+                        <div class="content">
+                            <img src="p1.jpg" width="50%" hight="60%">
+
+                        </div>
+                    </div>
+                    <div class="column light">
+                        <div class="content">
+                            <img src="p2.jpg" width="50%" hight="80%">
+                        </div>
+                    </div>
+                    <div class="column light">
+                        <div class="content">
+                            <img src="p3.jpg" width="50%" hight="95%">
+                        </div>
+                    </div>
+
+                    <div class="column Green">
+                        <div class="content">
+                            <img src="m1.png" width="50%" hight="90%">
+                        </div>
+                    </div>
+                    <div class="column Green">
+                        <div class="content">
+                            <img src="m2.jpg" width="50%" hight="60%">
+
+                        </div>
+                    </div>
+                    <div class="column Green">
+                        <div class="content">
+                            <img src="m3.jpg" width="50%" hight="70%">
+
+                        </div>
+                    </div>
+                    <div class="column Green">
+                        <div class="content">
+                            <img src="m4.jpg" width="50%" hight="60%">
+                        </div>
+                    </div>
+                    <div class="column no">
+                        <div class="content">
+                            <img src="o1.jpg" width="50%" hight="60%">
+
+                        </div>
+                    </div>
+                    <div class="column no">
+                        <div class="content">
+                            <img src="o2.jpg" width="50%" hight="70%">
+                        </div>
+                    </div>
+                    <div class="column no">
+                        <div class="content">
+                            <img src="o3.jpg" width="50%" hight="80%">
+                        </div>
+                    </div>
+
+                    <!-- -->
+                </div>
+            </center>
+    </div>
+    <!--  -->
+    <script>
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            } 4
+        }
+
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 </body>
+
 </html>
