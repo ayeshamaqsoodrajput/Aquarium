@@ -6,24 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,500;0,900;1,700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,500;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>collection</title>
 </head>
 <!--style-->
 <style>
-     body {
+    body {
         font-family: 'Playfair Display', serif;
     }
+
     * {
         margin: 0%;
         padding: 0%;
     }
 
-.nav-item :nth-child(1) {
-    margin-left: 40px;
-}
+    .nav-item :nth-child(1) {
+        margin-left: 40px;
+    }
 
     .collection {
         background-color: rgb(229, 227, 227);
@@ -39,9 +45,10 @@
     .text h1 {
         font-size: 100px;
     }
-    .text p{
+
+    .text p {
         color: goldenrod;
-    } 
+    }
 
     .mainC {
         width: 100%;
@@ -77,7 +84,7 @@
         width: 40%;
         height: 30vh;
     }
-    <!---->
+
     .mainU {
         width: 100%;
         height: 80vh;
@@ -85,13 +92,14 @@
 
     }
 
-    .leftU{
+    .leftU {
         width: 50%;
         height: 50vh;
         margin-top: 3%;
         padding-left: 9%;
 
     }
+
     .leftU p {
         padding-top: 5%;
     }
@@ -346,208 +354,211 @@
         </div>
     </div>
 </nav>
-        <div class="collection">
-            <div class="text">
-                <p>EXPLORE OUR</p>
-                <h1>Collection</h1>
-                <h1>|</h1>
-            </div>
-            <!-- Header -->
-            <div class="header" id="myHeader">
-                <button class="btn active" onclick="two()">Dinh Nguyen</button>
-                <button class="btn" onclick="four()">Madison Fox</button>
+<div data-aos="fade-up"> <p>Somebody in Zlatar, Mauritius has just purchased Events Schedule - WordPress Events Calendar Plugin (Regular
+    License)
+    29 minutes ago</p></div>
+<div class="collection">
+    <div class="text">
+        <p>EXPLORE OUR</p>
+        <h1>Collection</h1>
+        <h1>|</h1>
+    </div>
+    <!-- Header -->
+    <div class="header" id="myHeader">
+        <button class="btn active" onclick="two()">Dinh Nguyen</button>
+        <button class="btn" onclick="four()">Madison Fox</button>
+    </div>
+
+    <!-- Photo Grid -->
+    <div class="main">
+        <div class="row">
+            <div class="column">
+                <img src="p2.jpg" style="width:100%">
+                <img src="conu.jpg" style="width:100%">
+                <img src="n3.jpg" style="width:100%">
+                <img src="m1.png" style="width:100%">
             </div>
 
-            <!-- Photo Grid -->
-            <div class="main">
+            <div class="column">
+                <img src="p1.jpg" style="width:100%">
+                <img src="n1.jpg" style="width:100%">
+                <img src="o3.jpg" style="width:100%">
+                <img src="o1.jpg" style="width:100%">
+                <img src="m4.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="n4.jpg" style="width:100%">
+                <img src="m2.jpg" style="width:100%">
+                <img src="m3.jpg" style="width:100%">
+                <img src="o2.jpg" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br>
+    <script>
+        // Get the elements with class="column"
+        var elements = document.getElementsByClassName("column");
+
+        // Declare a loop variable
+        var i;
+
+        // Full-width images
+        function one() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "100%";  // IE10
+                elements[i].style.flex = "100%";
+            }
+        }
+
+        // Two images side by side
+        function two() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "50%";  // IE10
+                elements[i].style.flex = "50%";
+            }
+        }
+
+        // Four images side by side
+        function four() {
+            for (i = 0; i < elements.length; i++) {
+                elements[i].style.msFlex = "25%";  // IE10
+                elements[i].style.flex = "25%";
+            }
+        }
+
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myHeader");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <div class="mainC">
+        <div class="leftC">
+            <h1>𝐑𝐞𝐚𝐝 𝐌𝐨𝐫𝐞<br>𝐀𝐛𝐨𝐮𝐭 𝐎𝐮𝐫<br> 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧</h1>
+            <p>No in he real went find mr. <br>
+                Wandered or strictly raillery <br>
+                stanhill as. Jennings appetite <br>
+                disposed me an at subjects an. To <br>
+                no indulgence diminution so discovered mr apartments.</p>
+        </div>
+        <div class="rightC">
+            <img src="us.jpg" class="img-fluid0" alt=""> <br> <br>
+            <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
+                consectetur<br>
+                adipiscing elit.</p>
+        </div>
+    </div>
+    <hr>
+    <div class="mainU">
+        <div class="leftU">
+            <p>Abilities forfeited situation extremely my to he<br> resembled. Old had conviction discretion
+                <br> understood put principles you. Match means<br> keeps round one her quick. She forming
+                two<br> comfort invited. Yet she income effect edward<br>. Entire desire way design few. Mrs
+                <br>
+                sentiments led solicitude estimating friendship fat.<br>
+                Meant those event is weeks state it to or. Boy but has folly
+            </p>
+            <p>Received shutters expenses ye he pleasant. Drift<br> as blind above at up. No up simple county
+                stairs<br>
+                do should praise as. Drawings sir gay together<br> landlord had law smallest. Formerly
+                welcomed<br>
+                attended declared met say unlocked. Jennings<br> outlived no dwelling denoting in peculiar as
+                he<br>
+                believed.
+                Behaviour excellent middleton be as it<br> curiosity departure ourselves.</p>
+        </div>
+        <div class="rightU">
+            <img src="cu.jpg" class="img-fluid0" alt=""> <br> <br>
+            <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
+                consectetur<br>
+                adipiscing elit.</p>
+        </div>
+    </div>
+    <hr>
+    <!--footer-->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-content pt-5 pb-5">
                 <div class="row">
-                    <div class="column">
-                        <img src="p2.jpg" style="width:100%">
-                        <img src="conu.jpg" style="width:100%">
-                        <img src="n3.jpg" style="width:100%">
-                        <img src="m1.png" style="width:100%">
-                    </div>
-
-                    <div class="column">
-                        <img src="p1.jpg" style="width:100%">
-                        <img src="n1.jpg" style="width:100%">
-                        <img src="o3.jpg" style="width:100%">
-                        <img src="o1.jpg" style="width:100%">
-                        <img src="m4.jpg" style="width:100%">
-                    </div>
-                    <div class="column">
-                        <img src="n4.jpg" style="width:100%">
-                        <img src="m2.jpg" style="width:100%">
-                        <img src="m3.jpg" style="width:100%">
-                        <img src="o2.jpg" style="width:100%">
-                    </div>
-                </div>
-            </div>
-            <br> <br> <br> <br>
-            <script>
-                // Get the elements with class="column"
-                var elements = document.getElementsByClassName("column");
-
-                // Declare a loop variable
-                var i;
-
-                // Full-width images
-                function one() {
-                    for (i = 0; i < elements.length; i++) {
-                        elements[i].style.msFlex = "100%";  // IE10
-                        elements[i].style.flex = "100%";
-                    }
-                }
-
-                // Two images side by side
-                function two() {
-                    for (i = 0; i < elements.length; i++) {
-                        elements[i].style.msFlex = "50%";  // IE10
-                        elements[i].style.flex = "50%";
-                    }
-                }
-
-                // Four images side by side
-                function four() {
-                    for (i = 0; i < elements.length; i++) {
-                        elements[i].style.msFlex = "25%";  // IE10
-                        elements[i].style.flex = "25%";
-                    }
-                }
-
-                // Add active class to the current button (highlight it)
-                var header = document.getElementById("myHeader");
-                var btns = header.getElementsByClassName("btn");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function () {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
-            </script>
-            <div class="mainC">
-                <div class="leftC">
-                    <h1>𝐑𝐞𝐚𝐝 𝐌𝐨𝐫𝐞<br>𝐀𝐛𝐨𝐮𝐭 𝐎𝐮𝐫<br> 𝐂𝐨𝐥𝐥𝐞𝐜𝐭𝐢𝐨𝐧</h1>
-                    <p>No in he real went find mr. <br>
-                        Wandered or strictly raillery <br>
-                        stanhill as. Jennings appetite <br>
-                        disposed me an at subjects an. To <br>
-                        no indulgence diminution so discovered mr apartments.</p>
-                </div>
-                <div class="rightC">
-                    <img src="us.jpg" class="img-fluid0" alt=""> <br> <br>
-                    <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
-                        consectetur<br>
-                        adipiscing elit.</p>
-                </div>
-            </div>
-            <hr>
-            <div class="mainU">
-                <div class="leftU">
-                    <p>Abilities forfeited situation extremely my to he<br> resembled. Old had conviction discretion
-                        <br> understood put principles you. Match means<br> keeps round one her quick. She forming
-                        two<br> comfort invited. Yet she income effect edward<br>. Entire desire way design few. Mrs
-                        <br>
-                        sentiments led solicitude estimating friendship fat.<br>
-                        Meant those event is weeks state it to or. Boy but has folly
-                    </p>
-                    <p>Received shutters expenses ye he pleasant. Drift<br> as blind above at up. No up simple county
-                        stairs<br>
-                        do should praise as. Drawings sir gay together<br> landlord had law smallest. Formerly
-                        welcomed<br>
-                        attended declared met say unlocked. Jennings<br> outlived no dwelling denoting in peculiar as
-                        he<br>
-                        believed.
-                        Behaviour excellent middleton be as it<br> curiosity departure ourselves.</p>
-                </div>
-                <div class="rightU">
-                    <img src="cu.jpg" class="img-fluid0" alt=""> <br> <br>
-                    <p>I am text block. Click edit button<br> to change this text. Lorem ipsum<br> dolor sit amet,
-                        consectetur<br>
-                        adipiscing elit.</p>
-                </div>
-            </div>
-            <hr>
-            <!--footer-->
-            <footer class="footer-section">
-                <div class="container">
-                    <div class="footer-content pt-5 pb-5">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 mb-50">
-                                <div class="footer-widget">
-                                    <div class="footer-logo">
-                                        <h1> 🎀𝗔𝗿𝘁 𝗚𝗮𝗹𝗹𝗲𝗿𝘆 🎀</h1>
-                                    </div>
-                                    <div class="footer-text">
-                                        <p>Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Donec sed
-                                            odio <br>
-                                            operae, eu vulputate felis rhoncus. Quo usque tandem <br> abutere, Catilina,
-                                            patientia nostra? Etiam habebis sem dicantur.</p>
-                                    </div>
-
-                                </div>
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <h1> 🎀𝗔𝗿𝘁 𝗚𝗮𝗹𝗹𝗲𝗿𝘆 🎀</h1>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                                <div class="footer-widget">
-                                    <div class="footer-widget-heading">
-                                        <h3>Useful Links</h3>
-                                    </div>
-                                    <ul>
-                                        <li><a href="#">WHAT’S ON</a></li>
-                                        <li><a href="#"> COLLECTION</a></li>
-                                        <li><a href="#"> SHOP</a></li>
-                                        <li><a href="#"> VISIT US</a></li>
-                                        <li><a href="#"> ABOUT US</a></li>
-                                        <li><a href="#">JOURNAL</a></li>
-                                        <li><a href="#"> BUY NOW!</a></li>
-                                    </ul>
-                                </div>
+                            <div class="footer-text">
+                                <p>Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh. Donec sed
+                                    odio <br>
+                                    operae, eu vulputate felis rhoncus. Quo usque tandem <br> abutere, Catilina,
+                                    patientia nostra? Etiam habebis sem dicantur.</p>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                                <div class="footer-widget">
-                                    <div class="footer-widget-heading">
-                                        <h3>Subscribe</h3>
-                                    </div>
-                                    <div class="footer-text mb-25">
-                                        <p>Art Gallery WP
-                                            36 Battersea Square, London
-                                            Tel: 01624-621440.</p>
-                                    </div>
-                                    <div class="subscribe-form">
-                                        <form action="#">
-                                            <input type="text" placeholder="Email Address">
-                                            <button><i class="fab fa-telegram-plane"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">WHAT’S ON</a></li>
+                                <li><a href="#"> COLLECTION</a></li>
+                                <li><a href="#"> SHOP</a></li>
+                                <li><a href="#"> VISIT US</a></li>
+                                <li><a href="#"> ABOUT US</a></li>
+                                <li><a href="#">JOURNAL</a></li>
+                                <li><a href="#"> BUY NOW!</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Art Gallery WP
+                                    36 Battersea Square, London
+                                    Tel: 01624-621440.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="copyright-area">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                                <div class="copyright-text">
-                                    <p>Copyright &copy; 2017, All Right Reserved </p>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                                <div class="footer-menu">
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Terms</a></li>
-                                        <li><a href="#">Privacy</a></li>
-                                        <li><a href="#">Policy</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2017, All Right Reserved </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </div>
+    </footer>
     </body>
 
 </html>
