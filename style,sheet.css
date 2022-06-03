@@ -177,7 +177,13 @@ body {
     background-color: goldenrod;
     color: white;
     height: 20vh;
+    width: 60%;
     text-align: center;
+}
+.EventRow>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footer*/
