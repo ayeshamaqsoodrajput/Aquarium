@@ -1,8 +1,5 @@
 <!--<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
+
 	<style>
 		#img-preview {
   display: none; 
@@ -101,6 +98,8 @@ function previewImages() {
             preview.appendChild(image);
         });
         reader.readAsDataURL(file);
+        imgPreview.style.display = "block";
+      imgPreview.innerHTML = '<img src="' + this.result + '" />';
     };
     
 };
